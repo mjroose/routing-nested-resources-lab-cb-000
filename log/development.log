@@ -709,3 +709,21 @@ Processing by ArtistsController#index as HTML
   [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
   Rendered artists/index.html.erb within layouts/application (3.1ms)
 Completed 200 OK in 179ms (Views: 178.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/sdfsdfsd/songs" for 98.222.177.136 at 2018-11-26 16:43:39 +0000
+Cannot render console from 98.222.177.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"sdfsdfsd"}
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 0]]
+Redirected to http://167.99.15.173:55092/artists
+Completed 302 Found in 22ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 98.222.177.136 at 2018-11-26 16:43:39 +0000
+Cannot render console from 98.222.177.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 189ms (Views: 188.5ms | ActiveRecord: 0.4ms)
